@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RequestCameraAuthorizationView" customModule="BecomeAPresenter" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="4rQ-GA-dqP" id="tvb-yZ-jS8"/>
+                <outlet property="cameraImageViw" destination="wuz-TA-tch" id="9BP-ao-Zz4"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="cOb-z2-7vd"/>
+                <outlet property="messageLabel" destination="gc9-rt-rnk" id="m3y-bd-clK"/>
+                <outlet property="titleLabel" destination="XHs-OS-h9D" id="OOl-2G-Cc9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wuz-TA-tch" userLabel="cameraImageView">
+                    <rect key="frame" x="166.66666666666666" y="209" width="60" height="57.666666666666671"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="3MX-tU-9JX"/>
+                        <constraint firstAttribute="width" constant="60" id="mep-az-Xfv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Authorization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-OS-h9D" userLabel="titleLabel">
+                    <rect key="frame" x="96.666666666666671" y="288" width="199.66666666666663" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We request camera Authorization to provide best User Experience" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc9-rt-rnk" userLabel="messageLabel">
+                    <rect key="frame" x="20" y="328" width="353" height="40.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemGrayColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rQ-GA-dqP" userLabel="actionButton">
+                    <rect key="frame" x="164" y="384.66666666666669" width="65" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="n3l-Px-9A8"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Allow"/>
+                    <connections>
+                        <action selector="actionButtonHandlerWithSender:" destination="-1" eventType="touchUpInside" id="dfE-qU-8cH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XHs-OS-h9D" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1FH-jJ-BKt"/>
+                <constraint firstItem="4rQ-GA-dqP" firstAttribute="top" secondItem="gc9-rt-rnk" secondAttribute="bottom" constant="16" id="9TN-vh-VPU"/>
+                <constraint firstItem="gc9-rt-rnk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JYX-bw-TjE"/>
+                <constraint firstItem="gc9-rt-rnk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="MbX-Or-N61"/>
+                <constraint firstItem="XHs-OS-h9D" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xfo-0P-lAa"/>
+                <constraint firstItem="wuz-TA-tch" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cOh-oA-Slv"/>
+                <constraint firstItem="gc9-rt-rnk" firstAttribute="top" secondItem="XHs-OS-h9D" secondAttribute="bottom" constant="16" id="kBi-RG-EGC"/>
+                <constraint firstAttribute="trailing" secondItem="gc9-rt-rnk" secondAttribute="trailing" constant="20" id="qKv-mT-fAU"/>
+                <constraint firstItem="4rQ-GA-dqP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v7j-79-IQ4"/>
+                <constraint firstItem="XHs-OS-h9D" firstAttribute="top" secondItem="wuz-TA-tch" secondAttribute="bottom" constant="20" id="xay-sy-d0q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="76" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
